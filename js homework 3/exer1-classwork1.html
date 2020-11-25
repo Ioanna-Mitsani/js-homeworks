@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    'use strict';
+
+let a = 1;
+let b = 100;
+let counter = 0;
+alert(`Think a number between ${a} and ${b}`);
+
+while(true) {
+    let c = Math.floor((a + b) / 2);                                                   // Average (integer) of a & b
+    let foundIt = confirm(`Is it ${c}?\n\nPress 'OK' if yes, or 'Cancel' otherwise`);
+    counter++;
+
+    if (counter === 7 && foundIt == false){
+        alert(`There is something fishy about your answers...`);
+        break; 
+    }
+
+    if (foundIt){                                                                               // answer === true
+        alert(`I found the number you were thinking about ${c} in ${counter} times!`);
+        break;
+    }	  
+                                                                                        
+    let larger = confirm(`Is it larger than ${c}?\n\nPress 'OK' if yes, or 'Cancel' otherwise`);
+    if (larger) {				                                                                // larger === true
+        a = c + 1;
+    } else {
+        b = c - 1;
+    }
+}
+
+    </script>
+</body>
+</html>

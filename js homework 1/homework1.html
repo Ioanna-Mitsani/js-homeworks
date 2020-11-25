@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       "use strict";
+
+       let R = prompt('Δώστε ακτίνα κύκλου σε cm');
+
+       console.log(typeof(R));
+
+        parseInt(R);
+
+        let perimeter = 2*Math.PI*R;
+        perimeter = Math.ceil(perimeter);
+        let area = Math.PI*R**2;      
+        area = Math.ceil(area);  
+
+        alert ('Η περίμετρος του κύκλου είναι: '+ perimeter + ' cm \n' +'To εμβαδό του κύκλου είναι: '+ area + ' cm^2');
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2</title>
+</head>
+<body>
+    <script>
+        "use strict";
+
+        const married = confirm("Είσαι παντρεμένος/η; (OK = Ναι/Cancel = Όχι)");
+        
+        let children = prompt("Πόσα παιδιά έχεις; (Γράψε '0' αν δεν έχεις)");
+        children = parseInt(children);
+
+        let childrenString;
+
+        if(children < 0){
+            alert("Μη δεκτός αριθμός παιδιών");
+        } else {
+            switch (children){
+                case 0:
+                childrenString = "χωρίς παιδιά";
+                break;
+                case 1:
+                childrenString = "με ένα παιδί";
+                break;
+                case 2:
+                childrenString = "με δύο παιδιά";
+                break;
+                case 3:
+                childrenString = "τρίτεκνος";
+                break;
+                default:
+                childrenString = "πολύτεκνος";
+            }
+            if (married == true){
+            alert("Παντρεμένος/η & "+ childrenString);
+        } else {
+            alert("Ανύπαντρος/η & "+ childrenString);
+        }
+
+        }
+                
+
+
+    </script>
+</body>
+</html>
