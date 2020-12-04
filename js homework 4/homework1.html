@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict";
+
+        const planets = ["Mars", "Saturn", "Uranus"]; // Ο αρχικός πίνακας
+        planets.push("Neptune", "Pluto"); // Προσθέτει τα στοιχεία στο τέλος του
+        planets.unshift("Mercury", "Venus", "Earth", "Earth's Moon"); // Προσθέτει τα στοιχεία στην αρχή
+        
+        let saturnIndex = planets.indexOf("Saturn", 0);
+        planets.splice(saturnIndex, 0, "Jupiter");
+       
+       let moonIndex = planets.indexOf("Earth's Moon", 0);
+       planets.splice(moonIndex, 1);
+       planets.pop("Pluto");
+
+       for (let planet of planets){
+           console.log(planet);
+       }
+
+    </script>
+</body>
+</html>
