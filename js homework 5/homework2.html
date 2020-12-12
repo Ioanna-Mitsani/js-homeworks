@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework2</title>
+</head>
+<body>
+   <script>
+       'use strict';
+
+        function containsNotAllowedChars(input){
+            const notAllowedChars = ['<', '>', '@', '#'];
+            for (let i=0; i<input.length; i++){
+                if (notAllowedChars.indexOf(input.charAt(i)) !== -1){
+                    return true;
+                }
+                
+            }
+            return false;
+        };
+
+        const input = prompt('Give input:');
+
+        alert(containsNotAllowedChars(input) ? 'Something is not right' : 'All good!');
+   </script> 
+</body>
+</html>

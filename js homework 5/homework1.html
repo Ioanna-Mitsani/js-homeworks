@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        
+        /* Σορτάρω τη λίστα κατά φθίνουσα σειρά, σύμφωνα με το μήκος του κάθε string
+        στο τέλος της ταξινόμησης, εμφανίζω στο χρήστη το πρώτο στοιχείο του πίνακα
+        που είναι και η πιο μακριά λέξη */ 
+    
+        function longestWord() {
+        wordList.sort(function (a, b) {
+            if (a.length > b.length) {
+                return -1;
+            }
+            if (b.length > a.length) {
+                return 1;
+            }
+            return b.localeCompare(a); // Αν δύο λέξεις έχουν το ίδιο μήκος, τότε τις συγκρίνει με βάση τους χαρακτήρες και επιστρέφει αυτή που είναι πιο μετά αλφαβητικά (Σύμφωνα με τη γλώσσα του browser).
+        });
+    alert(`The longest word is: ${wordList[0]}`);
+    }
+
+    const wordList = [];
+
+    while (true) {
+        let word = prompt ('Type a word:\n(Press ok/cancel to stop)');
+
+        if (!word) break;
+
+        wordList.push(word);
+    }
+ 
+    longestWord();
+    </script>
+</body>
+</html>
